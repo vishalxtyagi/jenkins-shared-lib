@@ -1,11 +1,14 @@
-def call() {
-    def toEmail = env.USER_EMAIL
 
-    def checkEmail() {
-        println toEmail
-        return toEmail ?: null
-    }
-
-    println "Hello World";
-    return this;
+def checkEmail() {
+    def toEmail = ''
+    println toEmail
+    return toEmail ?: null
 }
+def call() {
+    println checkEmail()
+
+    println "Hello World"
+    return this
+}
+
+call()
